@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">DemoActivity</string>
+    <string name="hello">Hello again."\n"Welcome back.</string>
+    <string name="hello_sign_up">Hello!"\n"Sign up to get started.</string>
+    <string name="title_activity_new_feed">NewFeed</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">Forgot password?</string>
+
+    <string name="inbox">Inbox</string>
+    <string name="all_categories">All Categories</string>
+    <string name="chicago">Chicago, IL 60611, USA</string>
+
+    <string name="email_address">EMAIL ADDRESS</string>
+    <string name="input_email">Input email</string>
+    <string name="pass">PASSWORD</string>
+    <string name="input_password">Input password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="new_to_friendly_design">New to Friendly Design? </string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="full_name">FULL NAME</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account">Already have an account? </string>
+    <string name="_5_45_pm">5 : 45 PM</string>
+    <string name="vernon_bradley">Vernon Bradley</string>
+    <string name="shall_we_meet_today">Shall we meet today?</string>
+    <string name="today_03_24_pm">Today, 03:24 PM</string>
+    <string name="content">What is the loop of Creation?
+        How is there something from nothing? In spite of the fact that it is impossible to prove that anything….</string>
+    <string name="_340_00">$34000</string>
+
+    <string name="martin_palmer">Martin Palmer</string>
+    <string name="what_your_name">What your name?</string>
+    <string name="_3">3</string>
+    <string name="alex">Alex</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="json">Json</string>
+    <string name="i_wait">I wait for school. You remember ...</string>
+    <string name="alice">Alice</string>
+</resources>

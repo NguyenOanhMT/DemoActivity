@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:id="@+id/linear_line"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="5">
+        <ImageView
+            android:id="@+id/line_home"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:src="@drawable/ic_rectangle_line"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/line_mess"
+            android:paddingLeft="@dimen/dp26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rectangle_line"
+            android:visibility="invisible"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/line_plus"
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:src="@drawable/ic_rectangle_line"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/line_ring"
+            android:paddingLeft="@dimen/dp40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:src="@drawable/ic_rectangle_line"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/line_profile"
+            android:paddingLeft="@dimen/dp26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:src="@drawable/ic_rectangle_line"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp70"
+        android:paddingTop="9dp"
+        android:weightSum="5">
+        <ImageView
+            android:id="@+id/imv_home"
+            android:src="@drawable/ic_home_black_24dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imv_message"
+            android:src="@drawable/ic_group_8"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/imv_plus"
+            android:src="@drawable/ic_plus"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/imv_notification"
+            android:src="@drawable/ic_group_9"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_profile"
+            android:src="@drawable/profile_main"
+            android:layout_gravity="center"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

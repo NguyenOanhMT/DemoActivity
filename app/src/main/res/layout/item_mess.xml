@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fbfcfe"
+    android:layout_height="@dimen/dp80">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imv_avatar"
+        android:src="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_online_offline"
+        android:layout_width="@dimen/dp10"
+        android:layout_height="@dimen/dp10"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="1dp"
+        android:layout_alignBottom="@+id/imv_avatar"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toStartOf="@+id/linear"
+        android:src="@color/colorAccent"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:paddingLeft="@dimen/dp10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/imv_avatar">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp15"
+            android:textColor="@color/darkish_pink"
+            android:text="@string/vernon_bradley" />
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/dark_blue_grey"
+            android:text="@string/shall_we_meet_today" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/background_number_mess"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/background_number_mess"/>
+
+        <TextView
+            android:id="@+id/number_mess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_marginEnd="@dimen/dp5"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number_mess"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:text="@string/_5_45_pm"
+            android:textColor="@color/dark_blue_grey"
+            android:textSize="@dimen/sp10" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp2"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_two" />
+
+</RelativeLayout>
