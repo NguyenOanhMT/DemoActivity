@@ -41,36 +41,37 @@ public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
-        ItemUser item = listUser.get (i);
+        final ItemUser itemUser = listUser.get (i);
 
-        holder.userName.setText (item.getUsername ());
-        if(item.getNumberMess () != null){
+        holder.userName.setText (itemUser.getUsername ());
+        if(itemUser.getNumberMess () != null){
             holder.userName.setTextColor (context.getResources().getColor (R.color.colorAccent));
         }else {
             holder.userName.setTextColor (context.getResources().getColor (R.color.dark_blue_grey));
         }
-        if (item.getStatus () == "online"){
-            holder.imageAction.setImageResource (item.getActionUser ());
+        if (itemUser.getStatus () == "online"){
+            holder.imageAction.setImageResource (itemUser.getActionUser ());
         }else {
             holder.imageAction.setVisibility (View.GONE);
         }
-        holder.message.setText (item.getMessage ());
-        holder.numberMess.setText (item.getNumberMess ());
+        holder.message.setText (itemUser.getMessage ());
+        holder.numberMess.setText (itemUser.getNumberMess ());
 
-        holder.imageAvatar.setImageResource (item.getImvAvatar ());
-        holder.backgroundNumberMess.setImageResource (item.getImageNumber ());
+        holder.imageAvatar.setImageResource (itemUser.getImvAvatar ());
+        holder.backgroundNumberMess.setImageResource (itemUser.getImageNumber ());
 
-        holder.userName.setOnClickListener (new View.OnClickListener () {
+        holder.itemView.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                Toast.makeText (context.getApplicationContext (), "hello", Toast.LENGTH_SHORT).show ();
-//                Bundle bundle = new Bundle ();
-//                bundle.putInt ("avatar", item.getImvAvatar ());
-//
-//                Intent intent = new Intent (context.getApplicationContext (), MessageActivity.class);
-//                intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                intent.putExtra ("bundle", bundle);
-//                context.startActivity (intent);
+                Bundle bundle = new Bundle ();
+                bundle.putString ("name", itemUser.getUsername ());
+                bundle.putInt ("avatar", itemUser.getImvAvatar ());
+                bundle.putInt ("id", itemUser.getId ());
+
+                Intent intent = new Intent (context.getApplicationContext (), MessageActivity.class);
+                intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra ("bundle", bundle);
+                context.startActivity (intent);
             }
         });
     }
@@ -94,15 +95,6 @@ public class ItemUserAdapter extends RecyclerView.Adapter<ItemUserAdapter.ViewHo
 
             itemView.setOnClickListener (this);
 
-//            userName.setOnClickListener (new View.OnClickListener () {
-//                @Override
-//                public void onClick(View view) {
-//                    Toast.makeText (context.getApplicationContext (), "hello", Toast.LENGTH_SHORT).show ();
-//                    Intent intent = new Intent (context.getApplicationContext (), MessageActivity.class);
-//                    intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    context.startActivity (intent);
-//                }
-//            });
         }
 
         @Override

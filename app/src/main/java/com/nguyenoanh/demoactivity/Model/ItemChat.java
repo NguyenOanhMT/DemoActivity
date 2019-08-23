@@ -1,13 +1,11 @@
 package com.nguyenoanh.demoactivity.Model;
 
 public class ItemChat {
-    private int id;
-    private String sender;
-    private String receiver;
+    private int sender;
+    private int receiver;
     private String message;
 
-    public ItemChat(int id, String sender, String receiver, String message) {
-        this.id = id;
+    public ItemChat(int sender, int receiver, String message) {
         this.sender = sender;
         this.receiver = receiver;
         this.message = message;
@@ -16,27 +14,19 @@ public class ItemChat {
     public ItemChat() {
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getSender() {
+    public int getSender() {
         return sender;
     }
 
-    public void setSender(String sender) {
+    public void setSender(int sender) {
         this.sender = sender;
     }
 
-    public String getReceiver() {
+    public int getReceiver() {
         return receiver;
     }
 
-    public void setReceiver(String receiver) {
+    public void setReceiver(int receiver) {
         this.receiver = receiver;
     }
 

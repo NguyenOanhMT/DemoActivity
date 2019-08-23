@@ -26,13 +26,11 @@ public class ItemMessageAdapter extends RecyclerView.Adapter<ItemMessageAdapter.
 
     private Context context;
     private ArrayList<ItemChat> listChat;
+//    private String imageURL;
 
-    private String imageURL;
-
-    public ItemMessageAdapter(Context context, ArrayList<ItemChat> listChat, String imageURL) {
+    public ItemMessageAdapter(Context context, ArrayList<ItemChat> listChat) {
         this.context = context;
         this.listChat = listChat;
-        this.imageURL = imageURL;
     }
 
     @NonNull
@@ -56,11 +54,11 @@ public class ItemMessageAdapter extends RecyclerView.Adapter<ItemMessageAdapter.
         switch (holder.getItemViewType ()){
             case 0:
                 holder.showMess.setText (chat.getMessage ());
-                if (imageURL.equals("default")){
-                    holder.profileImage.setImageResource(R.drawable.anh);
-                } else {
-                    Glide.with(context).load(imageURL).into(holder.profileImage);
-                }
+//                if (imageURL.equals("default")){
+//                    holder.profileImage.setImageResource(R.drawable.anh);
+//                } else {
+//                    Glide.with(context).load(imageURL).into(holder.profileImage);
+//                }
                 break;
             case 1:
                 holder.showMess.setText (chat.getMessage ());
@@ -72,7 +70,7 @@ public class ItemMessageAdapter extends RecyclerView.Adapter<ItemMessageAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public CircleImageView profileImage;
-        public TextView showMess, tvSeen;
+        public TextView showMess;
 
         public ViewHolder(@NonNull View itemView) {
             super (itemView);
@@ -84,11 +82,11 @@ public class ItemMessageAdapter extends RecyclerView.Adapter<ItemMessageAdapter.
 
     @Override
     public int getItemViewType(int i){
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance ().getCurrentUser ();
-        if(listChat.get (i).getSender ().equals (firebaseUser.getUid())){
-            return MSG_TYPE_RIGHT;
-        }else {
+//        FirebaseUser firebaseUser = FirebaseAuth.getInstance ().getCurrentUser ();
+        if(listChat.get (i).getSender () == getItemId (i)){
             return MSG_TYPE_LEFT;
+        }else {
+            return MSG_TYPE_RIGHT;
         }
     }
 
